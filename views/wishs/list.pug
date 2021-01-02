@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+     .row
+        .col-sm-8
+            h2 Wish List
+        .col-sm-4
+            a(href="/wishs/add", class="btn btn-success float-right" , id="i") Wish List Add    
+        table.table
+            thead
+                tr
+                    th Name
+                    th Company
+                    th Actions
+            tbody
+                each product in products
+                    tr
+                        td=product.name
+                        td=product.company
+                        td
+                            a(href="/wishs/delete/"+product._id, class="btn btn-danger", id="l") Delete

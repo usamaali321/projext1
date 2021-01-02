@@ -1,0 +1,23 @@
+extends ../layout
+
+
+block content
+    h1 Edit Item
+    form(action="/products/edit/"+product._id, method="post")
+        div(class="form-group")
+            lable(for="name") Item Name
+            input(type="text" ,class="form-control" ,id="name" ,name="name" ,value= product.name)
+        div(class="form-group")
+            lable(for="price") Price of Item
+            input(type="text" ,class="form-control" ,id="price" ,name="price" ,value= product.price)
+        div(class="form-group")
+            lable(for="city") City
+            input(type="text" ,class="form-control" ,id="city" ,name="city" ,value= product.city)
+        div(class="form-group")
+            lable(for="colour") colour
+            input(type="text" ,class="form-control" ,id="colour" ,name="colour" ,value= product.colour)
+        div(class="form-group")
+            lable(for="detail") More Details (if any)
+            input(type="text" ,class="form-control" ,id="detail" ,name="detail" ,value= product.detail)
+        input(type="submit" ,class="btn btn-primary")
+    
